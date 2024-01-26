@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabla de Notas Finales</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            margin: auto;
+        }
+
+        th,
+        td {
+            text-align: center;
+            padding: 8px;
+            border: 1px solid black;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 style="text-align: center;">Notas Finales</h1>
+    <div style="display: flex; justify-content: center;">
+        <h2 style="text-align: center;">Nombre:</h2>
+        <h2 id="nombre" style="text-align: center;"></h2>
+    </div>
+    <h2 style="text-align: center; color: rgb(73, 4, 4);">Carrera: Informatica</h2>
+    <table>
+        <thead>
+            <tr style="background: black; color: white;">
+                <th>Ramo</th>
+                <th>Nota 1</th>
+                <th>Nota 2</th>
+                <th>Nota 3</th>
+                <th>Promedio</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>HTML</td>
+                <td id="nota1"></td>
+                <td id="nota2"></td>
+                <td id="nota3"></td>
+                <td id="promedio1"></td>
+            </tr>
+            <tr style="background-color: #faebd700;">
+                <td>CSS</td>
+                <td id="nota4"></td>
+                <td id="nota5"></td>
+                <td id="nota6"></td>
+                <td id="promedio2"></td>
+            </tr>
+            <tr>
+                <td>JavaScript</td>
+                <td id="nota7"></td>
+                <td id="nota8"></td>
+                <td id="nota9"></td>
+                <td id="promedio3"></td>
+            </tr>
+            <tr>
+                <td>Promedio General</td>
+                <td colspan="3"></td>
+                <td id="promedio4"></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <script>
+    
+        var nombre = prompt("Ingresa tu nombre HTML:");
+        document.getElementById("nombre").innerHTML = nombre;
+        console.log("nombre" + " " + nombre);
+
+        var nota1 = prompt("Ingresa la nota 1 del Ramo HTML:");
+        document.getElementById("nota1").innerHTML = nota1;
+        console.log("Nota1" + " " + nota1);
+
+        var nota2 = prompt("Ingresa la nota 2 del Ramo HTML:");
+        document.getElementById("nota2").innerHTML = nota2;
+        console.log("Nota2" + " " + nota2);
+
+        var nota3 = prompt("Ingresa la nota 3 del Ramo HTML:");
+        document.getElementById("nota3").innerHTML = nota3;
+        console.log("Nota3" + " " + nota3);
+
+        var promedio1 = (parseFloat(nota1) + parseFloat(nota2) + parseFloat(nota3)) / 3;
+        document.getElementById("promedio1").innerHTML = promedio1.toFixed(2);
+
+        var nota4 = prompt("Ingresa la nota 1 del Ramo CSS:");
+        document.getElementById("nota4").innerHTML = nota4;
+        console.log("Nota4" + " " + nota4);
+
+        var nota5 = prompt("Ingresa la nota 2 del Ramo CSS:");
+        document.getElementById("nota5").innerHTML = nota5;
+        console.log("Nota5" + " " + nota5);
+
+        var nota6 = prompt("Ingresa la nota 3 del Ramo CSS:");
+        document.getElementById("nota6").innerHTML = nota6;
+        console.log("Nota6" + " " + nota6);
+
+        var promedio2 = (parseFloat(nota4) + parseFloat(nota5) + parseFloat(nota6)) / 3;
+        document.getElementById("promedio2").innerHTML = promedio2.toFixed(2);
+
+        var nota7 = prompt("Ingresa la nota 1 del Ramo JavaScript:");
+        document.getElementById("nota7").innerHTML = nota7;
+        console.log("Nota7" + " " + nota7);
+
+        var nota8 = prompt("Ingresa la nota 2 del Ramo JavaScript:");
+        document.getElementById("nota8").innerHTML = nota8;
+        console.log("Nota8" + " " + nota8);
+
+        var nota9 = prompt("Ingresa la nota 3 del Ramo JavaScript:");
+        document.getElementById("nota9").innerHTML = nota9;
+        console.log("Nota9" + " " + nota9);
+
+        var promedio3 = (parseFloat(nota7) + parseFloat(nota8) + parseFloat(nota9)) / 3;
+        document.getElementById("promedio3").innerHTML = promedio3.toFixed(2);
+
+        var promedio4 = (promedio1 + promedio2 + promedio3) / 3;
+        document.getElementById("promedio4").innerHTML = promedio4.toFixed(2);
+        console.log("promedio4" + " " + promedio4)
+    </script>
+</body>
+
+</html>
